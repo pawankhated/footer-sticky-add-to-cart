@@ -1,4 +1,16 @@
 <?php
+
+add_filter('add_to_cart_redirect', 'lw_add_to_cart_redirect');
+function lw_add_to_cart_redirect() {
+
+    if(isset($_POST['add_to_cart_redirect']) && $_POST['submit']=="direct"){
+        global $woocommerce;
+        $lw_redirect_checkout = $woocommerce->cart->get_checkout_url();
+        return $lw_redirect_checkout;   
+    }
+ 
+}
+
 function wc_qty_add_product_field() {
 
     echo '<div class="options_group">';
@@ -14,20 +26,17 @@ function wc_qty_add_product_field() {
     echo '</div>';
 }
 add_action( 'woocommerce_product_options_inventory_product_data', 'wc_qty_add_product_field' );
-
-
 function wc_qty_save_product_field( $post_id ) {
     $val_min = trim( get_post_meta( $post_id, '_wc_min_qty_product', true ) );
     $new_min = sanitize_text_field( $_POST['_wc_min_qty_product'] );
+
+
     
     if ( $val_min != $new_min ) {
         update_post_meta( $post_id, '_wc_min_qty_product', $new_min );
     }
 }
-
 add_action( 'woocommerce_process_product_meta', 'wc_qty_save_product_field' );
-
-
 
 function wc_qty_input_args( $args, $product ) {
     
@@ -53,7 +62,6 @@ function wc_qty_input_args( $args, $product ) {
     return $args;
 }
 add_filter( 'woocommerce_quantity_input_args', 'wc_qty_input_args', 10, 2 );
-
 
 
 function wc_get_product_min_limit( $product_id ) {

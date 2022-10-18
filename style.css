@@ -1,162 +1,243 @@
 
 /* added by developer */
-button.plus, button.minus {
-    min-width: 30px;
-    font-size: 30px;
+
+.stricky-footer button.btn_add_cart.button.alt {
+    margin-right: 10px;
 }
 
-  .stricky-footer {
-            display: flex;
-            background: #e9e9e9;
-            padding: 20px;
-            justify-content: center;
-            position: fixed;
-            width: 100%;
-            transition: .4s all ease;
-            bottom: -150px;
-        }
-
-    .stricky-footer form{
-      display: flex;
-    }
-    .quantity {
-    background: #fff;
-    border: 2px solid #212529;
-    display: flex;
-    margin-right: 16px;
+.stricky-footer .btn-box {
+  display: flex;
+}
+.stricky-footer .btn-box a.buy-now.button {
+  display: unset;
+  padding: 17px;
 }
 
-input#quantity_6347f83467d25 {
-    min-height: 45px;
-    border: none;
-    background: #fff;
-    outline: none;
+.stricky-footer .quantity {
+  max-width: 140px;
+  margin: 0 auto;
 }
+.stricky-footer button.button.alt {
+  min-width: auto !important;
+  padding: 10px !important;
+  font-size: 14px;
+}
+.stricky-footer span.woocommerce-Price-amount.amount {
+  width: 100%;
+  justify-content: center;
+}
+.stricky-footer .btn-box a.buy-now.button {
+  margin-left: 8px;
+  padding: 17px 8px;
+}
+
 button.plus,
 button.minus {
-    min-height: 45px;
-    border: none;
-    background: #fff;
-    outline: none;
-    min-width: 30px;
-    font-size: 30px;
+  min-width: 30px;
+  font-size: 30px;
 }
-button.button.alt {
+
+.stricky-footer {
+  display: flex;
+  background: #e9e9e9;
+  padding: 20px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  transition: 0.4s all ease;
+  bottom: -150px;
+}
+
+.stricky-footer form {
+  display: flex;
+}
+.stricky-footer .quantity {
+  background: #fff;
+  border: 2px solid #212529;
+  display: flex;
+  margin-right: 16px;
+}
+
+.stricky-footer input#quantity_6347f83467d25 {
+  min-height: 45px;
+  border: none;
+  background: #fff;
+  outline: none;
+}
+.stricky-footer button.plus,
+.stricky-footer button.minus {
+  min-height: 45px;
+  border: none;
+  background: #fff;
+  outline: none;
+  min-width: 30px;
+  font-size: 30px;
+}
+.stricky-footer button.button.alt {
+  background: #fff;
+  color: #212529;
+  border: 2px solid #212529;
+  border-radius: 0;
+  min-width: 230px !important;
+  min-height: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.stricky-footer button.button.alt:hover {
+  background: #2e79a2;
+  border-color: #2e79a2;
+  color: #fff;
+}
+.stricky-footer a.buy-now.button {
+  background: #2e79a2;
+  border-color: #2e79a2;
+  color: #fff;
+  border-radius: 0;
+  min-width: 230px;
+  min-height: 50px;
+  font-weight: 500;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 10px 0px;
+  text-align: center;
+  display: flex;
+}
+.stricky-footer .input-text {
+  border: none !important;
+}
+
+.stricky-footer .price-box {
+  display: flex;
+  align-items: center;
+}
+.stricky-footer span.woocommerce-Price-amount.amount {
+  font-weight: 600;
+  font-size: 1.563rem;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.stricky-footer .quantity {
+  opacity: 1 !important;
+  pointer-events: visiblepainted !important;
+}
+
+.stricky-footer .qty {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  margin-right: 18px;
+}
+
+.show-footer {
+  transition: 0.4s all ease;
+  bottom: 0;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .stricky-footer a.buy-now.button {
+    min-width: 135px;
+    padding: 16px 27px;
+  }
+
+  .stricky-footer button.button.alt {
     background: #fff;
     color: #212529;
     border: 2px solid #212529;
     border-radius: 0;
-    min-width: 230px;
+    min-width: 150px;
     min-height: 50px;
     font-weight: 500;
-    text-transform: uppercase;
-}
-button.button.alt:hover{
-  background: #2E79A2;
-    border-color: #2E79A2;
-  color: #fff;
-}
-a.buy-now.button {
-    background: #2E79A2;
-    border-color: #2E79A2;
-    color: #fff;
-    border-radius: 0;
-    min-width: 230px;
-    min-height: 50px;
-    font-weight: 500;
-    margin-left: 15px;
-    text-decoration: none;
-    padding: 10px 0px;
+  }
+
+  .stricky-footer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #e9e9e9;
+    padding: 15px;
+    justify-content: space-between;
+  }
+
+  .stricky-footer input#quantity_6347f83467d25 {
+    width: 36px;
     text-align: center;
+  }
+}
+
+@media (max-width: 980px) {
+  .stricky-footer form {
     display: flex;
-}
-.stricky-footer .input-text {
-    border: none!important;
-}
+    justify-content: center;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0 auto;
+        align-items: center;
+  }
 
-.stricky-footer span.woocommerce-Price-amount.amount {
-    font-weight: 600;
-    font-size: 1.563rem;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-.stricky-footer .quantity {
-    opacity: 1!important;
-    pointer-events: visiblepainted!important;
+  .stricky-footer .price-box {
+    justify-content: center;
+    margin-bottom: 5px;
 }
 
-.stricky-footer .qty {
-    opacity: 1 !important;
-    pointer-events: auto!important;
-    margin-right: 18px;
+.stricky-footer button.button.alt {
+    min-width: 150px !important;
+  }
+
+
+
+  .stricky-footer span.woocommerce-Price-amount.amount {
+    width: auto;
+  }
+
+  .stricky-footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .stricky-footer .quantity {
+    margin-right: 8px;
 }
- 
-.show-footer{
-    transition: .4s all ease;
-    bottom: 0;
 }
 
-  @media only screen and (max-width: 1200px) {
-            a.buy-now.button {
-                min-width: 135px;
-                padding: 16px 27px;
-            }
+@media only screen and (max-width: 500px) {
+  .stricky-footer button.button.alt {
+    padding: 5px !important;
+    font-size: 13px;
+  }
 
-            button.button.alt {
-                background: #fff;
-                color: #212529;
-                border: 2px solid #212529;
-                border-radius: 0;
-                min-width: 150px;
-                min-height: 50px;
-                font-weight: 500;
-            }
+  .stricky-footer input#quantity_6347f83467d25 {
+    width: 80px;
+    text-align: center;
+  }
 
-            .stricky-footer {
-                display: flex;
-                flex-wrap: wrap;
-                background: #e9e9e9;
-                padding: 15px;
-                justify-content: center;
 
-            }
 
-            input#quantity_6347f83467d25 {
-                width: 36px;
-                text-align: center;
-            }
-        }
+  .stricky-footer a.buy-now.button {
+    min-width: 135px;
+    padding: 17px 11px;
+    font-size: 13px;
+  }
 
-        @media only screen and (max-width: 500px) {
 
-          button.button.alt {
-            padding: 5px !important;
-            font-size: 13px;
-        }
+}
+@media only screen and (max-width: 460px) {
+  .stricky-footer .quantity {
+    margin-right: 0;
+  }
+  .stricky-footer form {
 
-            input#quantity_6347f83467d25 {
-                width: 80px;
-                text-align: center;
-            }
+    flex-wrap: wrap;
+    
+}
+.stricky-footer .quantity  {
+    width: 100%;
+    margin: 0 auto 20px !important;
+}
+}
 
-            button.button.alt,
-            a.buy-now.button {
-                margin-top: 20px;
-            }
-
-            a.buy-now.button {
-                min-width: 135px;
-                padding: 17px 11px;
-                font-size: 13px;
-            }
-
-            .quantity {
-                margin-right: 35px;
-            }
-        }
-        @media only screen and (max-width: 460px) {
-            .quantity {
-                margin-right: 0;
-            }
-        }
+@media (max-width: 767px) {
+  .stricky-footer {
+    flex-wrap: wrap;
+  }
+}
